@@ -1,0 +1,26 @@
+{
+  "name": "javascript_algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acalzadaa/javascript_algorithms.git"
+  },
+  "keywords": [
+    "algorithm",
+    "data_structure"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acalzadaa/javascript_algorithms/issues"
+  },
+  "homepage": "https://github.com/acalzadaa/javascript_algorithms#readme",
+  "dependencies": {
+    "jest": "^26.2.2"
+  }
+}
