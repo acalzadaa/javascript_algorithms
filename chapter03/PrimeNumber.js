@@ -12,6 +12,4 @@ function isPrime(n) {
     return true;
 }
 
-console.log(isPrime(5));
-
 module.exports = isPrime;

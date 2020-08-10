@@ -20,6 +20,4 @@ function primes(n) {
     return primerList;
 }
 
-console.log(primes(12));
-
 module.exports = primes;
