@@ -1,4 +1,4 @@
-const regexpressions = require("../RegularExpressions");
+//const regexpressions = require("../RegularExpressions");
 
 test('Testing Regex ANY NUMERIC CHARS', () => {
     let reg = /\d+/;
@@ -36,11 +36,11 @@ test('Testing Regex ONLY FLOATING NUMBERS', () => {
 
 test('Testing Regex ONLY ALPHANUMERIC CHARACTERS', () => {
     let reg = /^[a-zA-Z0-9]*$/
-    expect(reg.test("12.12")).toEqual(true);
+    expect(reg.test("12.12")).toBe(false);
     expect(reg.test("12a.12")).toEqual(false);
-    expect(reg.test("12")).toEqual(false);
-    expect(reg.test("abcde")).toEqual(false);
-    expect(reg.test("1212")).toEqual(false);
+    expect(reg.test("12")).toEqual(true);
+    expect(reg.test("abcde")).toEqual(true);
+    expect(reg.test("1212")).toEqual(true);
     expect(reg.test("012.")).toEqual(false);
 
 });
