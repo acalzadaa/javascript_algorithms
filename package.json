@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/acalzadaa/javascript_algorithms#readme",
   "dependencies": {
-    "jest": "^26.2.2"
+    "jest": "^26.3.0"
   }
 }
