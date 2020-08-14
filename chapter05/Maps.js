@@ -1,6 +1,6 @@
 
-function maps_multiply_an_array_by(arrays, number){
-    return arrays.map( x => x * number);
+function maps_multiply_an_array_by(arrays, number) {
+    return arrays.map(x => x * number);
 }
 
-console.log(maps_multiply_an_array_by([1,2,3,4], 11));
+module.exports = { maps_multiply_an_array_by };

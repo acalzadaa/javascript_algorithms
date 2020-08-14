@@ -7,7 +7,19 @@ For example, in an array like [1,2,3,4,5], what numbers add up to 9?
 The answers are 4 and 5, of course.
 */
 
-//solution
+function find_two_values_that_sum_to_a_value(numbersArray, total) {
+    return numbersArray.filter(number => number < total).reduce((init, current, index, arrays) => {
+        arrays.slice(index).reduce((init2, current2, index2, arrays2) => {
+            if (current + current2 == total) {
+                if (init[0] == -1) {
+                    init.shift();
+                }
+                init.push([current, current2]);
+            }
+        })
+        return init;
+    }, [-1])
+}
 
 /*
 IMPLEMENT THE ARRAY.SLICE() FUNCTION FROM SCRATCH
@@ -18,7 +30,15 @@ It returns a portion of an existing array without modifying the array function a
 (array, beginIndex, endIndex).
 */
 
-//solution
+function slice_function_from_scratch(stringArray, beginIndex, endIndex) {
+    return stringArray.reduce((init, current, index, array) => {
+        if (index >= beginIndex && index <= endIndex) {
+            init.push(current);
+        }
+
+        return init;
+    }, [])
+}
 
 /*
 FIND THE MEDIAN OF TWO SORTED ARRAYS OF THE SAME SIZE
@@ -29,4 +49,13 @@ Here’s an example:
 [1,2,3,4] has the median of (2+3)/2 = 2.5.
 */
 
-//solution
+function find_the_median(orderedArray){
+    return orderedArray.reduce( (init, current, index, array) => {
+        if(array.length % 2 === 0 && index === (array.length / 2) ){
+            init = ( (array[index-1] + array[index]) / 2)
+        }
+        return init;
+    },0)
+}
+
+module.exports = { find_two_values_that_sum_to_a_value, slice_function_from_scratch, find_the_median };
