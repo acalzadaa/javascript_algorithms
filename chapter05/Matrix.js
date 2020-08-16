@@ -3,16 +3,13 @@ function create_matrix(rows, columns) {
 }
 
 function rotate_a_matrix(array) {
-    let returnArray = create_matrix(array.length, array.length);
-    let gap = 2;
 
-    for (let indexR in array) {
-        for (let indexC in array[indexR]) {
-            returnArray[indexC][gap] = array[indexR][indexC];
-        }
-        gap--;
-    }
-    return returnArray;
+    return array.reduce((acumR, currR, indexR, arrR) => {
+        arrR[indexR].reduce((acumC, currC, indexC, arrC) => {
+            acumR[indexC][arrR.length-1-indexR] = array[indexR][indexC];
+        }, arrR.length - 1 - indexR);
+        return acumR;
+    }, create_matrix(array.length, array.length))
 }
 
 console.log(rotate_a_matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
@@ -55,5 +52,5 @@ function delete_an_array_column(numberArray, index) {
     }, []);
 }
 
-module.exports = { rotate_a_matrix,create_matrix, delete_an_array_row, delete_an_array_column, read_an_array_column_with_limits, read_an_array_row_with_limits, read_an_array_row, read_an_array_column };
+module.exports = { rotate_a_matrix, create_matrix, delete_an_array_row, delete_an_array_column, read_an_array_column_with_limits, read_an_array_row_with_limits, read_an_array_row, read_an_array_column };
 

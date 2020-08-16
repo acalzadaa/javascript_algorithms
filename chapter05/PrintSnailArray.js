@@ -38,7 +38,6 @@ function print_array_in_snail_order(numberArray) {
             }
 
             if (-1 === orientation["x"]) {
-                console.log("izquierda");
                 snail.push(read_an_array_row_with_limits(numberArray, rowFence, 0, columnFence).reverse());
                 numberArray = delete_an_array_row(numberArray, rowFence);
                 rowFence = numberArray.length - 1;
@@ -58,7 +57,6 @@ function print_array_in_snail_order(numberArray) {
             }
 
             if (-1 === orientation["y"]) {
-                console.log("abajo");
                 snail.push(read_an_array_column_with_limits(numberArray, columnFence, 0, rowFence));
                 numberArray = delete_an_array_column(numberArray, columnFence);
                 columnFence = numberArray[0].length;
