@@ -1,11 +1,9 @@
 function calculate_angle_between_two_points(ax, ay, bx, by) {
 
-
     let x_direction = bx - ax;
     let y_direction = by - ay;
 
     let angleRad = Math.atan((y_direction) / (x_direction));
-
     let angleDeg
     if (x_direction >= 0 && y_direction >= 0) {
         angleDeg = angleRad * 180 / Math.PI;
