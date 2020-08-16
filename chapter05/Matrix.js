@@ -12,8 +12,6 @@ function rotate_a_matrix(array) {
     }, create_matrix(array.length, array.length))
 }
 
-console.log(rotate_a_matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
-
 function read_an_array_row(numberArray, index) {
     return numberArray[index].reduce((init, curr) => {
         init.push(curr);
