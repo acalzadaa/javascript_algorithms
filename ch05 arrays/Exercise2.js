@@ -1,7 +1,5 @@
-/*
-Let’s create an example problem with a matrix. Given a matrix, print the elements in a spiral
-order
-*/
+
+
 
 /*
 Given a matrix representing a tic-tac-toe board, determine whether someone won, whether it
@@ -21,7 +19,7 @@ To do this, check all three rows using a for loop, check all columns using a for
 check diagonals.
 */
 
-
+//code
 
 /*
 
@@ -32,29 +30,14 @@ programming languages. Combining it with backticks, you can create line breaks d
 variable-to-string assignment.
 1 var board =
 2 `%e%%%%%%%%%\n
-3 %...%.%...%\n
-4 %.%.%.%.%%%\n
-5 %.%.......%\n
-6 %.%%%%.%%.%\n
-7 %.%.....%.%\n
-8 %%%%%%%%%x%`;
+3  %...%.%...%\n
+4  %.%.%.%.%%%\n
+5  %.%.......%\n
+6  %.%%%%.%%.%\n
+7  %.%.....%.%\n
+8  %%%%%%%%%x%`;
 
 */
 
+//code
 
-
-/*
-Rotate a matrix to the left by 90 degrees.
-For example, the following:
-
-101
-001
-111
-
-rotates to this:
-
-111
-001
-101
-
-*/
