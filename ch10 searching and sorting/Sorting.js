@@ -15,4 +15,21 @@ function swap(array, firstIndex, secondIndex) {
     array[secondIndex] = temp;
 }
 
-module.exports = { bubbleSort };
+function selectionSort(array) {
+
+    for (let i = 0; i < array.length; i++) {
+        let smallest = i;
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[j] < array[smallest]) {
+                smallest = j;
+            }
+        }
+
+        if (i < smallest) {
+            swap(array, i, smallest);
+        }
+    }
+    return array;
+}
+
+module.exports = { bubbleSort, selectionSort };
