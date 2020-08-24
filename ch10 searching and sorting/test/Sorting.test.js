@@ -11,3 +11,13 @@ test('Testing bubble sorting', () => {
     expect(sort.selectionSort(array)).toEqual([1,2,3,4]);
 
 });
+
+test('Testing insertion sorting', () => {
+    expect(sort.insertionSort(array)).toEqual([1,2,3,4]);
+
+});
+
+test('Testing quicksort', () => {
+    expect(sort.quickSort(array)).toEqual([1,2,3,4]);
+
+});

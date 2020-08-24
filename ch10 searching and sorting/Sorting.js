@@ -32,4 +32,57 @@ function selectionSort(array) {
     return array;
 }
 
-module.exports = { bubbleSort, selectionSort };
+function insertionSort(items) {
+    let len = items.length, value, i, j;
+
+    for (i = 0; i < len; i++) {
+        value = items[i];
+
+        for (j = i - 1; j > -1 && items[j] > value; j--) {
+            items[j + 1] = value;
+        }
+    }
+    return items;
+}
+
+function quickSort(items) {
+    return quickSortHelper(items, 0, items.length - 1);
+}
+
+function quickSortHelper(items, left, right) {
+    let index;
+    if (items.length > 1) {
+        index = partition(items, left, right);
+
+        if (left < index - 1) {
+            quickSortHelper(items, left, index - 1);
+        }
+
+        if (index < right) {
+            quickSortHelper(items, index, right);
+        }
+    }
+    return items;
+}
+
+function partition(array, left, right) {
+    let pivot = array[Math.floor((right + left) / 2)];
+    while (left <= right) {
+        while (pivot > array[left]) {
+            left++;
+        }
+        while (pivot < array[right]) {
+            right--;
+        }
+        if (left <= right) {
+            let temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+            left++;
+            right--;
+        }
+    }
+    return left;
+}
+
+module.exports = { bubbleSort, selectionSort, insertionSort, quickSort };
